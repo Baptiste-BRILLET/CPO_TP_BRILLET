@@ -63,7 +63,7 @@ public class TP1_guessMyNumber_BRILLET {
                     System.out.println("Trop grand !");
                 } else {
                     System.out.println("Gagné !");
-                    System.out.println("Vous avez trouvé en " + compteur + " tentatives.");
+                    System.out.println("Vous avez trouvé en " + compteur + " tentatives."); 
                 }
                 if (compteur == maxTentatives && userInput != nombreAleatoire) {
                     System.out.println("Vous avez épuisé vos " + maxTentatives + " tentatives. Le nombre était " + nombreAleatoire + ".");
