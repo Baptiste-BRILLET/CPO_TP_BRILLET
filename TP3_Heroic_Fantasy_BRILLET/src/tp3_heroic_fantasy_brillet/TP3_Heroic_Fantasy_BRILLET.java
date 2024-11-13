@@ -8,63 +8,41 @@ package tp3_heroic_fantasy_brillet;
  *
  * @author baptistebrillet
  */
-import Armes.Epee;
-import Armes.Baton;
-import Armes.Arme;
-import Personnages.Personnage;
-import Personnages.Magicien;
-import Personnages.Guerrier;
-import java.util.ArrayList;
+import Armes.*;
+import Personnages.*;
 public class TP3_Heroic_Fantasy_BRILLET {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        // Création d'une liste dynamique pour stocker les armes
-        ArrayList<Arme> armes = new ArrayList<>();
+        // Création des armes
+        Epee excalibur = new Epee("Excalibur", 7, 5);
+        Epee durandal = new Epee("Durandal", 4, 7);
+        Baton chene = new Baton("Chêne", 4, 5);
+        Baton charme = new Baton("Charme", 5, 6);
 
-        // Création de 2 épées avec des paramètres différents
-        Epee epee1 = new Epee("Excalibur", 7, 5);
-        Epee epee2 = new Epee("Durandal", 4, 7);
+        // Création des personnages
+        Magicien gandalf = new Magicien("Gandalf", 65, true);
+        Guerrier conan = new Guerrier("Conan", 78, false);
 
-        // Ajout des épées à la liste
-        armes.add(epee1);
-        armes.add(epee2);
+        // Gestion des armes
+        gandalf.ajouterArme(chene);
+        gandalf.ajouterArme(durandal);
+        conan.ajouterArme(excalibur);
+        conan.ajouterArme(charme);
 
-        // Création de 2 bâtons avec des paramètres différents
-        Baton baton1 = new Baton("Chêne", 4, 5);
-        Baton baton2 = new Baton("Charme", 5, 6);
+        // Sélection d'armes
+        gandalf.choisirArme("Chêne");
+        conan.choisirArme("Excalibur");
 
-        // Ajout des bâtons à la liste
-        armes.add(baton1);
-        armes.add(baton2);
+        // Combat
+        conan.attaquer(gandalf);
+        System.out.println(gandalf);
+        System.out.println(conan);
 
-        // Affichage des détails de toutes les armes dans la liste
-        System.out.println("Liste des armes :");
-        for (int i = 0; i < armes.size(); i++) {
-            // Utilisation de get() pour obtenir l'arme à l'indice i
-            System.out.println(armes.get(i));
-        }
-        ArrayList<Personnage> personnages = new ArrayList<>();
-
-        Magicien magicien1 = new Magicien("Gandalf", 65, true);
-        Magicien magicien2 = new Magicien("Garcimore", 44, false);
-        personnages.add(magicien1);
-        personnages.add(magicien2);
-
-        Guerrier guerrier1 = new Guerrier("Conan", 78, false);
-        Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
-        personnages.add(guerrier1);
-        personnages.add(guerrier2);
-
-        System.out.println("Liste des personnages :");
-        for (Personnage personnage : personnages) {
-            System.out.println(personnage);
-        }
+        // Vérifier si les personnages sont vivants après le combat
+        System.out.println("Gandalf est vivant? " + gandalf.estVivant());
+        System.out.println("Conan est vivant? " + conan.estVivant());
     }
 }
-
-
-
