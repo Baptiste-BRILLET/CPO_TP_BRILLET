@@ -9,8 +9,9 @@ import Armes.Arme;
 import Armes.Baton;
 import Armes.Epee;
 import java.util.ArrayList;
+
 /**
- *
+ *BRILLET BAPTISTE TDC
  * @author baptistebrillet
  */
 

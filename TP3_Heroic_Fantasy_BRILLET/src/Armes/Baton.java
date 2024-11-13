@@ -5,7 +5,7 @@
 package Armes;
 
 /**
- *
+ *BRILLET BAPTISTE TDC
  * @author baptistebrillet
  */
 public class Baton extends Arme {

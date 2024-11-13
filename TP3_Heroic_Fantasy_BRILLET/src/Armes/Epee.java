@@ -5,7 +5,7 @@
 package Armes;
 
 /**
- *
+ *BRILLET BAPTISTE TDC
  * @author baptistebrillet
  */
 public class Epee extends Arme {

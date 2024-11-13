@@ -5,7 +5,7 @@
 package Personnages;
 
 /**
- *
+ *BRILLET BAPTISTE TDC
  * @author baptistebrillet
  */
 public class Magicien extends Personnage {

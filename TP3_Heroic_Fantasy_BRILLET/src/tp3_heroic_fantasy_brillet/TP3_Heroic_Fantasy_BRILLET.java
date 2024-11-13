@@ -5,7 +5,7 @@
 package tp3_heroic_fantasy_brillet;
 
 /**
- *
+ *BRILLET BAPTISTE TDC
  * @author baptistebrillet
  */
 import Armes.*;
